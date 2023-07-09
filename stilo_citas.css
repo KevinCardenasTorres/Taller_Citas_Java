@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /*Logo*/
+  body {
+    background-image: url('Imagenes/Fondo.avif');
+    box-shadow: 7px 13px 37px #330ae9;
+  }
+  
+  .Logo{
+    display: flex;
+    align-items: flex-end;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 1px 13px 37px #330ae9;
+  }
+  .logo img{
+    padding-left: 5%;
+    box-shadow: 1px 1px 1px #330ae9;
+  }
+  .logo h1{
+    font-size: 80px;
+    padding-left: 4%;
+    box-shadow: 1px 1px 1px #330ae9;
+  }
+  /*Logo*/
+  .servicios{
+    text-align: end;
+    padding-right: 5%;
+    
+  }
+  .Linea{
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #a1bdc6;
+    color: beige;
+    box-shadow: 7px 13px 37px #330ae9;
+    border-color: rgb(15, 4, 71);
+  }
+
+  /*Parte izquierda de la pagina*/
+
+  .Caja_1{
+    border-style: dotted ;
+    width: 400px;
+    height: 500px;
+    margin-left: 23px;
+    
+  }
+  .Caja_2{
+    position: absolute;
+    border-style: dotted ;
+    width: 800px;
+    height: 460px;
+    margin-left: 480px;
+    top: 320px; 
+  }
+
+  .Boton{
+    
+    background: #9a9a92;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 10px ;
+    margin-top:10px;
+    font-size: 16px;
+    
+  }
+  #B_1{
+    margin-right:95px;
+  }
+  #B_2{
+    margin-right:72px;
+  }
+  #B_3{
+    margin-right:100px;
+  }
+  #B_4{
+    margin-right:55px;
+  }
+  #B_5{
+    margin-right:75px;
+  }
+  #B_6{
+    margin-right:50px;
+  }
+
+  /*Lista de informacion de doctores*/
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333333;
+}
+
+.button_1 {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color:#a1bdc6;
+  border-color: rgb(15, 4, 71);
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+

@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stilo_citas.css">
+    
+    <title>Hogar Gerontologico Mis Dulces Niños S.A.S</title>
+</head>
+<body>
+    <table>
+        <div class="Logo">
+            <img id="Logo" src="Imagenes/Logo.PNG">
+            <h1 id="Titulo">Hogar Gerontologico Mis Dulces Niños S.A.S</h1>
+        </div>
+            
+    </table>
+    <div class="Servicios">
+        <button class="Linea"> Hacer click en citas medicas para el agendamiento</button>
+       <div class="Caja_1">
+        <button class="Boton" id="B_1" onclick="location.href='http://127.0.0.1:5500/Formato_Citas.html'">
+            <h1>Cita Medica</h1>
+        </button>
+        <button class="Boton" id="B_2">
+            <h1>Autorizaciones</h1>
+        </button>
+        <button class="Boton" id="B_3">
+            <h1>Afiliaciones</h1>
+        </button>
+        <button class="Boton" id="B_4">
+            <h1>Servicio al cliente</h1>
+        </button>
+        <button class="Boton" id="B_5">
+            <h1>Incapacidades</h1>
+        </button>
+        <button class="Boton" id="B_6" onclick="location.href='http://127.0.0.1:5500/Bienvenido.html'">
+            <h1>Salir</h1>
+        </button>
+       </div>
+
+        <!-- Informacion de doctores -->
+       <div class="Caja_2">
+        <div class="container">
+            <h1>Información de Doctores</h1>
+            <button class="button_1" onclick="mostrarInformacion()">Ver información de doctores</button>
+            <table id="tablaDoctores" style="display: none;">
+                <tr>
+                    <th>Especialidad</th>
+                    <th>Doctor</th>
+                    <th>Consultorio</th>
+                    <th>Correo</th>
+                </tr>
+                <tr>
+                    <td>Medicina general</td>
+                    <td>Maria Cadona</td>
+                    <td>13</td>
+                    <td>Maria2001@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Cardiología</td>
+                    <td>Raul Camacho</td>
+                    <td>11</td>
+                    <td>Raul_camacho@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Medicina interna</td>
+                    <td>Ricardo Martinez</td>
+                    <td>15</td>
+                    <td>Rich_doc2001@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Dermatología</td>
+                    <td>Angela Lasso</td>
+                    <td>20</td>
+                    <td>Angelical98@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Rehabilitación física</td>
+                    <td>Gabriela Opsina</td>
+                    <td>23</td>
+                    <td>Gabi_07osp@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Psicología</td>
+                    <td>Lina Vasquez</td>
+                    <td>16</td>
+                    <td>Linavas_2007@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Odontología</td>
+                    <td>Nelson Lopez</td>
+                    <td>18</td>
+                    <td>Nelsonlopez123@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Radiología</td>
+                    <td>Vanessa Rodas</td>
+                    <td>17</td>
+                    <td>Vanessadoc@gmail.com</td>
+                </tr>
+            </table>
+        </div>
+        
+        </div>
+
+        
+
+    <script src="Formulario_ingreso.js"></script>
+</body>
+</html>

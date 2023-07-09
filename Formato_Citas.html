@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Agendar Citas Médicas</title>
+  <link rel="stylesheet" type="text/css" href="Estilo_Agendar.css">
+
+</head>
+<body>
+  <h1>Agendar Citas Médicas</h1>
+  <div class="container">
+    <form id="appointmentForm">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" required>
+
+      <label for="apellido">Apellido</label>
+      <input type="text" id="apellido" required>
+
+      <label for="cedula">Cédula</label>
+      <input type="text" id="cedula" required>
+
+      <label for="edad">Edad</label>
+      <input type="text" id="edad" required>
+
+      <label for="correo">Correo Electrónico</label>
+      <input type="email" id="correo" required>
+
+      <label for="especialidad">Especialidad</label>
+      <select id="especialidad" onchange="mostrarDoctor()" required>
+        <option value="" disabled selected>Selecciona una especialidad</option>
+        <option value="medicina_general">Medicina General</option>
+        <option value="cardiologia">Cardiología</option>
+        <option value="medicina_interna">Medicina Interna</option>
+        <option value="dermatologia">Dermatología</option>
+        <option value="rehabilitacion_fisica">Rehabilitación Física</option>
+        <option value="psicologia">Psicología</option>
+        <option value="odontologia">Odontología</option>
+        <option value="radiologia">Radiología</option>
+      </select>
+
+      <div id="doctorContainer" style="display: none;">
+        <label for="doctor">Doctor</label>
+        <input type="text" id="doctor" disabled>
+        <label for="consultorio">Consultorio</label>
+        <input type="text" id="consultorio" disabled>
+        <label for="doctor_correo">Correo Electrónico del Doctor</label>
+        <input type="email" id="doctor_correo" disabled>
+      </div>
+
+      <label for="fecha">Fecha</label>
+      <input type="date" id="fecha" required>
+
+      <label for="hora">Hora</label>
+      <input type="time" id="hora" required>
+
+      <div class="button-container">
+        <button type="button" onclick="confirmarCita()">Agendar Cita</button>
+        
+        
+      </div>
+     
+    </form>
+  </div>
+
+  <div id="confirmModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal('confirmModal')">&times;</span>
+      <h2>Datos de Confirmación de Cita Médica</h2>
+      <p>¿Estás seguro de que los datos suministrados son correctos?</p>
+      <div class="button-container">
+        <button type="button" onclick="confirmarCitaExito()">Sí</button>
+        <button type="button" onclick="cerrarModal('confirmModal')">No</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="successModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal('successModal')">&times;</span>
+      <h2>Su Cita ha sido Agendada con Éxito</h2>
+      <p class="success-message">¡Gracias por agendar su cita!</p>
+      <p>A continuación, se muestran los detalles de su cita:</p>
+      <p><strong>Nombre:</strong> <span id="confirmNombre"></span></p>
+      <p><strong>Apellido:</strong> <span id="confirmApellido"></span></p>
+      <p><strong>Cédula:</strong> <span id="confirmCedula"></span></p>
+      <p><strong>Edad:</strong> <span id="confirmEdad"></span></p>
+      <p><strong>Correo Electrónico:</strong> <span id="confirmCorreo"></span></p>
+      <p><strong>Especialidad:</strong> <span id="confirmEspecialidad"></span></p>
+      <p><strong>Doctor:</strong> <span id="confirmDoctor"></span></p>
+      <p><strong>Consultorio:</strong> <span id="confirmConsultorio"></span></p>
+      <p><strong>Fecha:</strong> <span id="confirmFecha"></span></p>
+      <p><strong>Hora:</strong> <span id="confirmHora"></span></p>
+      <div class="button-container">
+        <button type="button" onclick="cerrarModal('successModal')">OK</button>
+      </div>
+    </div>
+  </div>
+
+  
+  
+  <div class="button-container">
+    <button type="button" onclick="mostrarCitasAgendadas()">Ver Citas Agendadas</button>
+    <button class="button-container" onclick="location.href='http://127.0.0.1:5500/Bienvenido.html'">Salir</button>
+  </div>
+
+  
+  <div id="appointmentListModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal('appointmentListModal')">&times;</span>
+      <h2>Mis Citas Agendadas</h2>
+      <div id="appointmentList" class="appointment-list"></div>
+    </div>
+  </div>
+
+
+  <script src="Proceso_Agendar.js"></script>
+
+</body>
+</html>
